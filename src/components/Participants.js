@@ -1,10 +1,15 @@
 import React from "react";
-import Participant from "./Participant";
 
 export default function Participants(props) {
+  const participantsList = props.participants.filter(participant =>
+    <Participants key={participant.id} name={participant.name} />
+    )
   return (
-    props.participants.filter(participant => {
-            return participant.inSession;
-    }
-  )
+    <div>
+      <li>
+       {participantsList}
+       </li>
+      </div>
+    )
 }
+
