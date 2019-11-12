@@ -1,8 +1,5 @@
 import React from "react";
-import "./App.css";
 
-function App() {
+export default function Participant() {
   return <div className="App"></div>;
 }
-
-export default App;
