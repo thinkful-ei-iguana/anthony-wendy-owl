@@ -1,9 +1,7 @@
 import React from "react";
-import store from "../STORE";
+import STORE from "../STORE";
 
 export default function inSession(props) {
-    const id = props.store.participants.id;
-    return {
-        '<p id={id}>in session</p>'
-    }
+  const id = STORE.participants.id;
+  return <p id={id}>in session</p>;
 }
