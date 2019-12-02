@@ -1,0 +1,10 @@
+.stage {
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+  background: slategray;
+}
+
+.img-stage {
+  padding-top: 100px;
+}

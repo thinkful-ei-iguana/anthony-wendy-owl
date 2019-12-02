@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatLog component renders the UI as expected 1`] = `
+<div
+  className="chat-panel"
+>
+  <h1>
+    Chat
+  </h1>
+  <div
+    className="c-list"
+  >
+    <li />
+  </div>
+</div>
+`;

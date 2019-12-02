@@ -1,25 +1,20 @@
 import React from "react";
+import Participants from "./components/Participants";
+import ChatLog from "./components/ChatLog";
 import Stage from "./components/Stage";
 import "./App.css";
-import STORE from "./STORE";
-import Participants from "./components/Participants";
 
-
-function App() {
-  
+function App(props) {
   return (
     <div className="App">
-      <Participants participants={STORE.participants[0].name} />
-      
-      <Stage />
+      <Participants participants={props.store.participants} />
+      <ChatLog
+        chatEvents={props.store.chatEvents}
+        participants={props.store.participants}
+      />
+      <Stage participants={props.store.participants} />
     </div>
   );
 }
 
 export default App;
-
-// key={STORE.participants.id}
-// name={STORE.participants.name}
-// avatar={STORE.participants.avatar} 
-// inSession={STORE.participants.inSession}
-// onStage={STORE.participants.onStage} />

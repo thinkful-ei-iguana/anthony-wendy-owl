@@ -1,0 +1,13 @@
+img {
+  height: 100px;
+  width: 100px;
+}
+.side-bar {
+  width: 200px;
+}
+.user {
+  display: flex;
+}
+.participant-info {
+  display: block;
+}

@@ -1,14 +1,25 @@
 import React from "react";
-import STORE from "../STORE";
+import "./Stage.css";
 
 export default function Stage(props) {
-  const name = STORE.participants.name;
-  const avatar = STORE.participants.avatar;
-  const id = STORE.participants.id;
-  return (
-    <div>
-      <div className="stage">{name}</div>
-      <img src={avatar} id={id} alt="user avatar" />
-    </div>
-  );
+  const stage = props.participants.map(participant => {
+    if (participant.onStage) {
+      return (
+        <div className="on-stage">
+          <h2 className="stage-person" key={participant.id}>
+            {participant.name}
+          </h2>
+          <img
+            src={participant.avatar}
+            alt="user avatar"
+            className="img-stage"
+          />
+        </div>
+      );
+    }
+  });
+  return <div className="stage">{stage}</div>;
 }
+Stage.defaultProps = {
+  participants: []
+};
